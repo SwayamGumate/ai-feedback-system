@@ -1,0 +1,14 @@
+# Netlify configuration for Admin Dashboard
+
+[build]
+  # No build command needed for static site
+  publish = "."
+
+[[redirects]]
+  # SPA fallback - redirect all routes to index.html
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  # No environment variables needed - API URL is configured in script.js
