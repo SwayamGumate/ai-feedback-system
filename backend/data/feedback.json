@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1764985003324",
+    "rating": 5,
+    "review": "Amazing service! Very happy with everything!",
+    "aiResponse": "Thank you so much for your wonderful feedback! We're thrilled to hear about your positive experience. Your support means the world to us!",
+    "summary": "Amazing service! Very happy with everything!",
+    "recommendedActions": [
+      "Share positive feedback with the team",
+      "Request permission to use as testimonial",
+      "Send a thank you note or discount code"
+    ],
+    "timestamp": "2025-12-06T01:36:43.324Z",
+    "sentiment": "positive"
+  },
+  {
+    "id": "1764985134339",
+    "rating": 3,
+    "review": "Very Good Food !!",
+    "aiResponse": "Thank you for taking the time to share your feedback. We appreciate your input and are always working to improve our service.",
+    "summary": "Very Good Food !!",
+    "recommendedActions": [
+      "Follow up to understand concerns better",
+      "Review internal processes for improvement",
+      "Monitor similar feedback patterns"
+    ],
+    "timestamp": "2025-12-06T01:38:54.339Z",
+    "sentiment": "neutral"
+  }
+]

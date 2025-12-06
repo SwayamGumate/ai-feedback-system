@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Your Feedback - AI Feedback System</title>
+    <meta name="description" content="Share your experience and receive instant AI-powered responses">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-gradient"></div>
+    
+    <main class="container">
+        <div class="feedback-card">
+            <div class="header">
+                <h1>We Value Your Feedback</h1>
+                <p class="subtitle">Share your experience and help us improve</p>
+            </div>
+
+            <form id="feedbackForm" class="feedback-form">
+                <!-- Star Rating -->
+                <div class="form-group">
+                    <label class="form-label">How would you rate your experience?</label>
+                    <div class="star-rating" id="starRating">
+                        <input type="radio" name="rating" id="star5" value="5">
+                        <label for="star5" class="star" data-rating="5">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </label>
+                        
+                        <input type="radio" name="rating" id="star4" value="4">
+                        <label for="star4" class="star" data-rating="4">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </label>
+                        
+                        <input type="radio" name="rating" id="star3" value="3">
+                        <label for="star3" class="star" data-rating="3">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </label>
+                        
+                        <input type="radio" name="rating" id="star2" value="2">
+                        <label for="star2" class="star" data-rating="2">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </label>
+                        
+                        <input type="radio" name="rating" id="star1" value="1">
+                        <label for="star1" class="star" data-rating="1">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </label>
+                    </div>
+                    <p class="rating-text" id="ratingText"></p>
+                </div>
+
+                <!-- Review Text -->
+                <div class="form-group">
+                    <label for="review" class="form-label">Tell us more about your experience</label>
+                    <textarea 
+                        id="review" 
+                        name="review" 
+                        rows="5" 
+                        placeholder="Share your thoughts, suggestions, or concerns..."
+                        required
+                        minlength="5"
+                    ></textarea>
+                    <p class="char-count"><span id="charCount">0</span> characters</p>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn" id="submitBtn">
+                    <span class="btn-text">Submit Feedback</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+
+            <!-- AI Response Section -->
+            <div class="ai-response" id="aiResponse">
+                <div class="response-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                    </svg>
+                </div>
+                <div class="response-content">
+                    <h3>Thank you for your feedback!</h3>
+                    <p id="aiResponseText"></p>
+                </div>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-message" id="errorMessage">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+                </svg>
+                <span id="errorText"></span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
