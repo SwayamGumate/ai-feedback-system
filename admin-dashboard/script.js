@@ -1,5 +1,5 @@
 // Configuration - Update with your deployed backend URL
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://ai-feedback-backend-88pd.onrender.com';
 let adminPassword = '';
 let autoRefreshInterval = null;
 let allFeedback = [];

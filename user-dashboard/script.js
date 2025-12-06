@@ -1,5 +1,5 @@
 // Configuration - Update this with your deployed backend URL
-const API_URL = 'http://localhost:3000';
+const API_URL = 'https://ai-feedback-backend-88pd.onrender.com';
 
 // DOM Elements
 const form = document.getElementById('feedbackForm');
