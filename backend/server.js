@@ -62,12 +62,14 @@ app.use((err, req, res, next) => {
     });
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`🚀 Server running on port ${PORT}`);
-    console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
-    console.log(`🔑 Admin password: ${process.env.ADMIN_PASSWORD ? 'Set' : 'NOT SET'}`);
-    console.log(`🤖 OpenRouter API: ${process.env.OPENROUTER_API_KEY ? 'Configured' : 'NOT CONFIGURED'}`);
-});
+// Start server only if not running on Vercel
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+    app.listen(PORT, () => {
+        console.log(`🚀 Server running on port ${PORT}`);
+        console.log(`📊 Environment: ${process.env.NODE_ENV || 'development'}`);
+        console.log(`🔑 Admin password: ${process.env.ADMIN_PASSWORD ? 'Set' : 'NOT SET'}`);
+        console.log(`🤖 OpenRouter API: ${process.env.OPENROUTER_API_KEY ? 'Configured' : 'NOT CONFIGURED'}`);
+    });
+}
 
 export default app;
